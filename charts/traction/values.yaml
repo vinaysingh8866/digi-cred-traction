@@ -275,7 +275,7 @@ tenant_proxy:
     repository: ghcr.io/honeymodi55/traction-tenant-proxy
     pullPolicy: IfNotPresent
     pullSecrets: []
-    tag: "sha-76a1e9c@sha256:f884591c68bc4f872859f4b56f89e70029018bb8830ff4eb892862631726cf4a"
+    tag: "sha-76a1e9c@sha256:b7c0e825c0ff59cf24af699beb9c5899d13f49c6eab6acc83c19a1ac2bb56dca"
   serviceAccount:
     create: false
     annotations: {}
