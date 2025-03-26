@@ -1,4 +1,4 @@
-FROM --platform=$BUILDPLATFORM ghcr.io/openwallet-foundation/acapy-agent:py3.12-1.2.2 AS base
+FROM --platform=$BUILDPLATFORM ghcr.io/openwallet-foundation/acapy-agent:py3.12-1.2.4 AS base
 
 # Install and Configure Poetry
 USER root
@@ -24,7 +24,7 @@ RUN poetry install --only main
 RUN ln -s $(poetry env info -p)/lib/python3.6/site-packages site-packages
 
 
-FROM --platform=$BUILDPLATFORM ghcr.io/openwallet-foundation/acapy-agent:py3.12-1.2.2
+FROM --platform=$BUILDPLATFORM ghcr.io/openwallet-foundation/acapy-agent:py3.12-1.2.4
 COPY --from=base --chown=aries:aries /home/aries/.venv /home/aries/.venv
 ENV PATH="/home/aries/.venv/bin:$PATH"
 
