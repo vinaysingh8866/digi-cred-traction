@@ -344,7 +344,7 @@ ui:
     repository: ghcr.io/honeymodi55/traction-tenant-ui
     pullPolicy: IfNotPresent
     pullSecrets: []
-    tag: "sha-76a1e9c@sha256:6b0ec919cd51a354e4641c41c1183d1b3355a0c5626c721c56a466bd3b4ce18b"
+    tag: "sha-76a1e9c@sha256:5de721ab655c7716b3602d9460297d0f6b03543f697055f0fe3922fba780e953"
 
   existingSecret: ""
 
