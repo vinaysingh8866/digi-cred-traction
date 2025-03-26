@@ -8,7 +8,7 @@ acapy:
     repository: ghcr.io/honeymodi55/traction-plugins-acapy
     pullPolicy: IfNotPresent
     pullSecrets: []
-    tag: "sha-76a1e9c@sha256:399d5133fe1f06dcd11415b14b6ea029a1fe960e6767e527170cb9ed7eb2e9e9"
+    tag: "sha-76a1e9c@sha256:eb76a161bc4c5d52d9a467bbe83cbc0db274d4dc430180138ea2d702950c352f"
 
   serviceAccount:
     create: false
