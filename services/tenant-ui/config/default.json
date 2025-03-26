@@ -75,5 +75,12 @@
       "senderAddress": "DoNotReplyCrMS@digicred.co",
       "innkeeperInbox": "dave@digicred.co"
     }
+  },
+  "database": {
+    "host": "localhost",
+    "user": "root",
+    "password": "password",
+    "name": "traction_db",
+    "port": 3306
   }
 }

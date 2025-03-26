@@ -6,6 +6,7 @@ import express, { Request, Response } from "express";
 import config from "config";
 import * as emailComponent from "../components/email";
 import * as innkeeperComponent from "../components/innkeeper";
+import * as databaseComponent from "../components/database";
 import { body, validationResult } from "express-validator";
 import { NextFunction } from "express";
 import oidcMiddleware from "../middleware/oidcMiddleware";
@@ -96,6 +97,43 @@ router.post(
       const result = await emailComponent.sendStatusEmail(req);
       res.send(result);
     } catch (error) {
+      next(error);
+    }
+  }
+);
+
+// Database Items endpoints
+router.get(
+  "/items",
+  async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const items = await databaseComponent.getAllItems();
+      res.status(200).json(items);
+    } catch (error) {
+      console.error(`Error fetching items: ${error}`);
+      next(error);
+    }
+  }
+);
+
+router.get(
+  "/items/:id",
+  async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const id = parseInt(req.params.id);
+      if (isNaN(id)) {
+        res.status(400).json({ error: "Invalid ID format" });
+        return;
+      }
+      
+      const item = await databaseComponent.getItemById(id);
+      if (item) {
+        res.status(200).json(item);
+      } else {
+        res.status(404).json({ error: "Item not found" });
+      }
+    } catch (error) {
+      console.error(`Error fetching item: ${error}`);
       next(error);
     }
   }

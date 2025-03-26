@@ -69,5 +69,12 @@
       "senderAddress": "SERVER_SMTP_SENDER_ADDRESS",
       "innkeeperInbox": "SERVER_SMTP_INNKEEPER_INBOX"
     }
+  },
+  "database": {
+    "host": "DB_HOST",
+    "user": "DB_USER",
+    "password": "DB_PASSWORD",
+    "name": "DB_NAME",
+    "port": "DB_PORT"
   }
 }
