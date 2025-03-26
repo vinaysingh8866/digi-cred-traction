@@ -1,4 +1,4 @@
-FROM --platform=$BUILDPLATFORM node:22-alpine
+FROM --platform=$BUILDPLATFORM node:23-alpine
 WORKDIR /usr/src/app
 
 # Copy all files from the current directory to the container
