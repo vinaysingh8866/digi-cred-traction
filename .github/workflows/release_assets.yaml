@@ -15,7 +15,7 @@ jobs:
     name: 'Build Traction Aca-Py'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4    
+      - uses: actions/checkout@v5    
       - name: Build Aca-Py Image
         uses: ./.github/actions/build_acapy
         id: builder
@@ -32,7 +32,7 @@ jobs:
     name: 'Build Tenant UI'
     runs-on: ubuntu-latest
     steps:      
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Build UI
         uses: ./.github/actions/build_ui
         id: builder
@@ -48,7 +48,7 @@ jobs:
     name: 'Build Tenant Proxy Image'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Build Tenant Proxy Image
         uses: ./.github/actions/build_acapy
         id: builder
